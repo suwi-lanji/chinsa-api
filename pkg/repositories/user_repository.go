@@ -20,7 +20,7 @@ func (r *UserRepository) CreateUser(ctx context.Context, user *models.User) erro
 		`
 	INSERT INTO users (username, password, email, created_at)
 	VALUES ($1, $2, $3, $4)
-	`, user.Username, user.Password, user.Email, user.CreatedAt)
+	`, user.Name, user.Password, user.Email, user.CreatedAt)
 	return err
 }
 
@@ -31,7 +31,7 @@ func (r *UserRepository) GetUserByUsername(ctx context.Context, username string)
 		`
 	SELECT id,username, password, email, created_at
 	FROM users WHERE username = $1
-	`, username).Scan(&user.ID, &user.Username, &user.Password, &user.Email, &user.CreatedAt)
+	`, username).Scan(&user.ID, &user.Name, &user.Password, &user.Email, &user.CreatedAt)
 
 	if err != nil {
 		return nil, err

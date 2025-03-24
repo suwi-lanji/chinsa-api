@@ -34,7 +34,7 @@ func TestRegisterUser(t *testing.T) {
 	userHandler := handlers.NewUserHandler(userRepo)
 
 	user := models.User{
-		Username: "testuser1",
+		Name:     "testuser2",
 		Password: "testpassword",
 		Email:    "test@example.com",
 	}

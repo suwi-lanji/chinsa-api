@@ -13,4 +13,5 @@ type User struct {
 	Password        string                 `json:"-"`
 	TenantId        string                 `json:"tenant_id"`
 	Properties      map[string]interface{} `json:"properties"`
+	CreatedAt       time.Time              `json:"created_at"`
 }

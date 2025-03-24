@@ -82,7 +82,7 @@ func (h *UserHandler) LoginUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid credentials", http.StatusUnauthorized)
 	}
 
-	token, err := auth.GenerateJWT(user.Username)
+	token, err := auth.GenerateJWT(user.Name)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 
