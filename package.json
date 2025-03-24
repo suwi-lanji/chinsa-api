@@ -9,12 +9,24 @@
   },
   "scripts": {
     "test": "go test ./...",
-    "prepare": "husky"
+    "prepare": "husky",
+    "push": "npx drizzle-kit push"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "^9.1.7"
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.5",
+    "husky": "^9.1.7",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.11",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.41.0",
+    "pg": "^8.14.1",
+    "ts-node": "^10.9.2"
   }
 }
