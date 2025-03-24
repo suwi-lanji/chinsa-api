@@ -1,11 +1,16 @@
 package models
 
-import "time"
+import (
+	"time"
+)
 
 type User struct {
-    ID        int       `json:"id"`
-    Username  string    `json:"username"`
-    Password  string    `json:"-"`
-    Email     string    `json:"email"`
-    CreatedAt time.Time `json:"created_at"`
+	ID              string                 `json:"id"`
+	Name            string                 `json:"name"`
+	Email           string                 `json:"email"`
+	EmailVerifiedAt time.Time              `json:"email_verified_at"`
+	Image           string                 `json:"image"`
+	Password        string                 `json:"-"`
+	TenantId        string                 `json:"tenant_id"`
+	Properties      map[string]interface{} `json:"properties"`
 }
